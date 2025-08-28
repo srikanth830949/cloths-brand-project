@@ -1,0 +1,161 @@
+/* Reset & basics */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background: #222;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+}
+
+
+/* Filters */
+
+.filters {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.filter-btn {
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #e5533d;
+}
+
+
+/* Products Grid */
+
+.products {
+    max-width: 1000px;
+    margin: 2rem auto 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+    padding: 0 1rem;
+}
+
+.product-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    margin: 0.8rem 0 0.3rem;
+}
+
+.product-item p {
+    color: #ff6347;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+/* Footer */
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .nav-links {
+        display: none;
+        /* for simplicity in mobile */
+    }
+}
